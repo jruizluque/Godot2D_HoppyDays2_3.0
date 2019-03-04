@@ -11,8 +11,14 @@ config_version=3
 [application]
 
 config/name="Godot2DHoppyDays2"
-run/main_scene="res://Scenes/Player.tscn"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1366
+window/size/height=768
+window/size/fullscreen=true
 
 [input]
 
