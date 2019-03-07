@@ -39,14 +39,14 @@ custom_solver_bias = 0.0
 radius = 60.0
 height = 32.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 2
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
