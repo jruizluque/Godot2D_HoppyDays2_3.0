@@ -18,7 +18,6 @@ config/icon="res://icon.png"
 
 window/size/width=1366
 window/size/height=768
-window/size/fullscreen=true
 
 [input]
 
@@ -43,4 +42,6 @@ ui_up=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"",
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
