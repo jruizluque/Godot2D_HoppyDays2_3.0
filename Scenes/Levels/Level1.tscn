@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
+editor/display_folded = true
 position = Vector2( 284.497, 1187.69 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
 world_limit = 2880
@@ -30,10 +33,29 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 1245198, 0, 0, 1310766, 1, 0, 1441799, 0, 0, 1441813, 0, 0, 1441819, 0, 0, 1441825, 0, 0, 1441831, 0, 0, 1441849, 0, 0, 1638401, 0, 0, 1638450, 0, 0 )
+tile_data = PoolIntArray( 851990, 2, 0, 1245198, 0, 0, 1310766, 1, 0, 1441799, 0, 0, 1441813, 0, 0, 1441819, 0, 0, 1441825, 0, 0, 1441831, 0, 0, 1441849, 0, 0, 1638401, 0, 0, 1638450, 0, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Spikes" type="Node2D" parent="." index="2"]
+
+[node name="SpikesTop" parent="Spikes" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 1190.12, 1188.47 )
+
+[node name="SpikesTop2" parent="Spikes" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 2584.66, 1381.46 )
+
+[node name="SpikesTop3" parent="Spikes" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 1919.59, 1381.27 )
+
+[node name="SpikesBottom" parent="Spikes" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 1510.78, 948.925 )
 
 
