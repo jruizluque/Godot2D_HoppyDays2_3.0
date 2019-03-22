@@ -6,11 +6,10 @@
 [ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-editor/display_folded = true
 position = Vector2( 284.497, 1187.69 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
 world_limit = 2880
@@ -41,6 +40,8 @@ tile_data = PoolIntArray( 851990, 2, 0, 1245198, 0, 0, 1310766, 1, 0, 1441799, 0
 _sections_unfolded = [ "Collision" ]
 
 [node name="Spikes" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="SpikesTop" parent="Spikes" index="0" instance=ExtResource( 4 )]
 
