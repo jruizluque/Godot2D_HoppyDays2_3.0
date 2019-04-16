@@ -8,6 +8,9 @@ const JUMP = -1750
 var motion = Vector2()
 export var world_limit = 3000
 
+func _ready():
+	Global.Player = self
+
 #Called during the physics processing step of the main loop.
 #Physics processing means that the frame rate is synced
 #to the physics, i.e. the delta variable should be constant.
@@ -39,7 +42,7 @@ func fall(delta):
 		motion.y += GRAVITY * delta
 		
 	if motion.y > world_limit:
-		get_parent().end_game()
+		Global.GameState.end_game()
 	
 func run():
 	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):

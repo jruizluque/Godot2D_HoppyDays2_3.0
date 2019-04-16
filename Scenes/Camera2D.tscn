@@ -3,7 +3,7 @@
 [ext_resource path="res://ParallaxBackground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=2]
 
-[node name="Camera2D" type="Camera2D" index="0"]
+[node name="Camera2D" type="Camera2D"]
 
 anchor_mode = 1
 rotating = false

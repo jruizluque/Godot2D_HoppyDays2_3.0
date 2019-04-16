@@ -4,8 +4,8 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=4]
-[ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Node2D" index="0"]
 
@@ -44,22 +44,12 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Spikes" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
+[node name="SpikesBottom" parent="Spikes" index="0" instance=ExtResource( 5 )]
 
-[node name="SpikesTop" parent="Spikes" index="0" instance=ExtResource( 5 )]
+position = Vector2( 1592.54, 948.673 )
 
-position = Vector2( 1190.12, 1188.47 )
+[node name="SpikesTop" parent="Spikes" index="1" instance=ExtResource( 6 )]
 
-[node name="SpikesTop2" parent="Spikes" index="1" instance=ExtResource( 5 )]
-
-position = Vector2( 2584.66, 1381.46 )
-
-[node name="SpikesTop3" parent="Spikes" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 1919.59, 1381.27 )
-
-[node name="SpikesBottom" parent="Spikes" index="3" instance=ExtResource( 6 )]
-
-position = Vector2( 1510.78, 948.925 )
+position = Vector2( 2287.78, 1380.2 )
 
 
