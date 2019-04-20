@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,13 @@
 [ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=8]
+[ext_resource path="res://SFX/jump1.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Scripts/Jump_SFX.gd" type="Script" id=10]
+[ext_resource path="res://SFX/pain.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Scripts/Pain_SFX.gd" type="Script" id=12]
+[ext_resource path="res://SFX/coin_SFX.wav" type="AudioStream" id=13]
+[ext_resource path="res://Scripts/Coin_SFX.gd" type="Script" id=14]
 
 [node name="Level1" type="Node2D" index="0"]
 
@@ -16,6 +23,7 @@ coin_target = 5
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 position = Vector2( 284.497, 1187.69 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
 world_limit = 2880
@@ -64,51 +72,90 @@ editor/display_folded = true
 [node name="Coin" parent="Coins" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 1863.32, 542.815 )
-frame = 5
+frame = 3
 
 [node name="Coin2" parent="Coins" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 2048.77, 425.361 )
-frame = 4
+frame = 2
 
 [node name="Coin3" parent="Coins" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 2258.95, 388.27 )
-frame = 4
+frame = 2
 
 [node name="Coin4" parent="Coins" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 2435.13, 561.361 )
-frame = 2
+frame = 0
 
 [node name="Coin5" parent="Coins" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 2490.77, 845.723 )
-frame = 2
+frame = 0
 
 [node name="Coin6" parent="Coins" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 2564.95, 1034.27 )
-frame = 2
+frame = 0
 
 [node name="Coin7" parent="Coins" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 2459.86, 728.269 )
-frame = 0
 
 [node name="Coin8" parent="Coins" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 3303.67, 888.995 )
-frame = 0
 
 [node name="Coin9" parent="Coins" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 3325.31, 1102.27 )
-frame = 5
+frame = 3
 
 [node name="Coin10" parent="Coins" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 3328.4, 1318.63 )
-frame = 5
+frame = 3
+
+[node name="Sounds" type="Node2D" parent="." index="4"]
+
+[node name="Music" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 8 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Jump_SFX" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 9 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 10 )
+
+[node name="Pain_SFX" type="AudioStreamPlayer" parent="Sounds" index="2"]
+
+stream = ExtResource( 11 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 12 )
+
+[node name="Coin_SFX" type="AudioStreamPlayer" parent="Sounds" index="3"]
+
+stream = ExtResource( 13 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 14 )
 
 

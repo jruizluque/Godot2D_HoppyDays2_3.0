@@ -53,11 +53,11 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Coin" type="AnimatedSprite"]
+[node name="Coin" type="AnimatedSprite" index="0"]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 4
 playing = true
 script = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
