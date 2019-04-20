@@ -57,7 +57,7 @@ tracks/1/keys = {
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 5
+frame = 1
 playing = true
 script = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
