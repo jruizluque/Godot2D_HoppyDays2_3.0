@@ -33,7 +33,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource_name = "Hurt"
 length = 0.2
@@ -52,9 +52,8 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "LifePulse"
 length = 0.2
 loop = false
 step = 0.1
@@ -233,8 +232,8 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/CoinPulse = SubResource( 2 )
-anims/Hurt = SubResource( 4 )
-anims/LifePulse = SubResource( 3 )
+anims/Hurt = SubResource( 3 )
+anims/LifePulse = SubResource( 4 )
 blend_times = [  ]
 
 
