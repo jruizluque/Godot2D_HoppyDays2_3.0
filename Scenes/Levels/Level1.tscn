@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -13,8 +13,9 @@
 [ext_resource path="res://SFX/pain.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/Pain_SFX.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/JumpPad.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Spikeman.tscn" type="PackedScene" id=14]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 starting_lives = 3
@@ -155,5 +156,11 @@ editor/display_folded = true
 [node name="JumpPad" parent="JumpPads" index="0" instance=ExtResource( 13 )]
 
 position = Vector2( 3047.71, 1252.57 )
+
+[node name="NPCs" type="Node2D" parent="." index="6"]
+
+[node name="Spikeman" parent="NPCs" index="0" instance=ExtResource( 14 )]
+
+position = Vector2( 1742.42, 1330.8 )
 
 
