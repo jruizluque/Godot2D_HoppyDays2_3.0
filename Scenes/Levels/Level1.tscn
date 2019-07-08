@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/JumpPad.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Spikeman.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Cloud.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=16]
 
 [node name="Level1" type="Node2D" index="0"]
 
@@ -70,52 +71,52 @@ editor/display_folded = true
 [node name="Coin" parent="Coins" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 1863.32, 542.815 )
-frame = 2
+frame = 1
 
 [node name="Coin2" parent="Coins" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 2048.77, 425.361 )
-frame = 1
+frame = 0
 
 [node name="Coin3" parent="Coins" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 2258.95, 388.27 )
-frame = 1
+frame = 0
 
 [node name="Coin4" parent="Coins" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 2435.13, 561.361 )
-frame = 5
+frame = 4
 
 [node name="Coin5" parent="Coins" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 2490.77, 845.723 )
-frame = 5
+frame = 4
 
 [node name="Coin6" parent="Coins" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 2564.95, 1034.27 )
-frame = 5
+frame = 4
 
 [node name="Coin7" parent="Coins" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 2459.86, 728.269 )
-frame = 0
+frame = 5
 
 [node name="Coin8" parent="Coins" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 3303.67, 888.995 )
-frame = 0
+frame = 5
 
 [node name="Coin9" parent="Coins" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 3325.31, 1102.27 )
-frame = 2
+frame = 1
 
 [node name="Coin10" parent="Coins" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 3328.4, 1318.63 )
-frame = 2
+frame = 1
 
 [node name="Sounds" type="Node2D" parent="." index="4"]
 
@@ -160,6 +161,8 @@ position = Vector2( 3047.71, 1252.57 )
 
 [node name="NPCs" type="Node2D" parent="." index="6"]
 
+editor/display_folded = true
+
 [node name="Spikeman" parent="NPCs" index="0" instance=ExtResource( 14 )]
 
 position = Vector2( 1742.42, 1330.8 )
@@ -175,5 +178,11 @@ position = Vector2( 1032.96, 654.115 )
 [node name="Cloud2" parent="NPCs" index="3" instance=ExtResource( 15 )]
 
 position = Vector2( 3619.3, 648.953 )
+
+[node name="Portal" parent="." index="7" instance=ExtResource( 16 )]
+
+position = Vector2( 4137.88, 1443.49 )
+
+[connection signal="body_entered" from="Portal" to="." method="_on_Portal_body_entered"]
 
 
